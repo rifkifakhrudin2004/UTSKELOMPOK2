@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'dart:math';
-import 'models/ImageData.dart';
+import 'models/ImagesData.dart';
 import 'storage_page.dart';
 
 class CameraPage extends StatefulWidget {
