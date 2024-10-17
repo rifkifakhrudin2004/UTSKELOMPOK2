@@ -1,16 +1,14 @@
-2. DatabaseHelper.dart 
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
-import 'package:uts_sregep/models/ImageData.dart';
-
+import 'package:utskelompok_2/models/ImagesData.dart';
 
 class DatabaseHelper {
-  static final DatabaseHelper instance = DatabaseHelper.();
+  static final DatabaseHelper instance = DatabaseHelper._();
   static Database? _database;
 
   DatabaseHelper._();
 
-  factory DatabaseHelper() => _instance;
+  factory DatabaseHelper() => instance; // Return the existing instance
 
   Future<Database> get database async {
     if (_database != null) return _database!;
