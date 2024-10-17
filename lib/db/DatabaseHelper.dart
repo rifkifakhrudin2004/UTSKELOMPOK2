@@ -29,13 +29,11 @@ class DatabaseHelper {
     );
   }
 
-  // Insert image data
   Future<void> insertImageData(ImageData imageData) async {
     final db = await database;
     await db.insert('images', imageData.toMap());
   }
 
-  // Retrieve all images
   Future<List<ImageData>> getAllImages() async {
     final db = await database;
     final List<Map<String, dynamic>> maps = await db.query('images');
